@@ -1,6 +1,11 @@
 #include <linux/module.h>
 #include <linux/init.h>
 
+
+static int hello_init(void);
+static void hello_exit(void);
+
+
 /**
  * The init function is called when the module is loaded.
  */
@@ -8,7 +13,7 @@ static int hello_init(void)
 {
 	printk(KERN_INFO "Hello Linux Kernel Modules World!\n");
 
-	return 0;
+	return (0);
 }
 
 /**
@@ -25,3 +30,4 @@ module_exit(hello_exit);
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Gustavo Silva");
 MODULE_DESCRIPTION("Hello World module");
+
