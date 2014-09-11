@@ -11,13 +11,13 @@ Follow the next steps:
 
 * Print the kernel ring buffer.
        - Once you have succesfully inserted the module you should print the kernel
-         ring buffer to see the "Hello Linux Kernel Modules world!" message.
+         ring buffer to see the "Hello Linux Kernel Modules World!" message.
 
 * Remove the module
 
 * Print the kernel ring buffer.
        - Once you have succesfully removed the module you should print the kernel
-         ring buffer to see the "See you around Linux Kernel Modules world!" message.
+         ring buffer to see the "See you around Linux Kernel Modules World!" message.
 
 
 How To:
@@ -28,14 +28,14 @@ $ make
 - Insert the module:
 $ sudo insmod hello.ko
 
-- List the modules on the system.
-$ lsmod
+- Check the module was properly loaded.
+$ lsmod | grep hello
 
 - Remove the module:
 $ sudo rmmod hello
 
 - Print the kernel ring buffer:
-$ dmesg
+$ dmesg | grep World!
 
 - Clean up:
 $ make clean
